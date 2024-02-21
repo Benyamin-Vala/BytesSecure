@@ -12,7 +12,7 @@ Welcome to BytesSecure! This web tool provides powerful features for generating 
 
 ## Demo 🌟
 
-You can try out BytesSecure by visiting [this link](https://benyamin-vala.github.io/bytes-secure/).
+You can try out BytesSecure by visiting [this link](https://benyamin-vala.github.io/BytesSecure/).
 
 ## How to Use 📝
 
