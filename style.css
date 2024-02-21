@@ -1,0 +1,163 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+:root {
+  --background-dark-color: rgba(37, 37, 37, 1);
+  --background-light-color: rgba(232, 233, 236, 1);
+  --button-clicked-color-darkTheme: rgba(245, 245, 245, 1);
+  --button-disabled-color-darkTheme: rgba(77, 77, 77, 1);
+  --button-clicked-color-lightTheme: rgba(33, 33, 33, 1);
+  --button-disabled-color-lightTheme: rgba(245, 245, 245, 1);
+}
+* {
+  background-color: var(--background-light-color);
+  font-family: sans-serif;
+  user-select: none;
+}
+.flex {
+  display: flex;
+}
+.wrap {
+  flex-wrap: wrap;
+}
+.gap-20 {
+  gap: 20px;
+}
+
+.moonicon {
+  color: var(--button-clicked-color-lightTheme);
+}
+.menu-main-btn > i {
+  background: transparent;
+  font-size: 24px;
+}
+.menu-main-btn {
+  background: var(--button-disabled-color-lightTheme);
+  padding: 20px;
+  cursor: pointer;
+
+  border-radius: 10px;
+}
+.logo {
+  font-size: 14px;
+}
+.menubar {
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px;
+}
+.align-center {
+  align-items: center;
+}
+.menuIcons {
+  justify-content: center;
+}
+.justicify-center {
+  justify-content: center;
+}
+.passgen-menu {
+  background-color: var(--button-disabled-color-lightTheme);
+  width: 350px;
+  margin: auto;
+  margin-top: 50px;
+  padding-top: 10px;
+  padding-bottom: 30px;
+  padding: 10px;
+  border-radius: 10px;
+}
+.passgen-menu > *,
+.passgen-menu > * > *,
+.passgen-menu > * > * > *,
+.passgen-menu > * > * > * > *,
+.passgen-menu > * > * > * > * > *,
+.passgen-menu > * > * > * > * > * > * {
+  background-color: transparent;
+}
+.title {
+  font-size: 20px;
+}
+.passwordInput-menu > input {
+  width: 250px;
+  margin-right: 10px;
+  height: 30px;
+  border: 0;
+  outline: none;
+  font-weight: bold;
+  font-size: 20px;
+}
+.passwordInput-menu > input:focus {
+  border: 0;
+}
+.passwordInput-menu {
+  border: solid 2px rgba(37, 37, 37, 0.5);
+  padding: 15px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  border-radius: 5px;
+}
+.passwordInput-menu > i {
+  color: var(--button-clicked-color-lightTheme);
+  opacity: 0.8;
+  cursor: pointer;
+  font-size: 15px;
+  padding: 5px;
+  padding-right: 0px;
+}
+input[type="checkbox"] {
+  accent-color: var(--button-clicked-color-lightTheme);
+}
+.password-length {
+  width: 305px;
+  height: 20px;
+  border: solid 2px rgba(37, 37, 37, 0.5);
+  outline: none;
+  padding: 5px;
+  font-size: 20px;
+  border-radius: 5px;
+}
+.password-gen-btn {
+  display: flex;
+  justify-content: center;
+  justify-self: center;
+  margin: auto;
+  margin-top: 30px;
+  border: 0;
+  font-weight: bold;
+  background-color: var(--button-clicked-color-lightTheme);
+  width: 320px;
+  margin-bottom: 15px;
+  padding: 14px;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+.justicify-between {
+  justify-content: space-between;
+}
+.pointer {
+  cursor: pointer;
+}
+#lightThemeIcon {
+  cursor: pointer;
+}
+#darkThemeIcon {
+  cursor: pointer;
+}
+#encoding-list,
+#encoding-list-items,
+#decoding-list,
+#decoding-list-items {
+  border: 0;
+  width: 315px;
+  height: 25px;
+  outline: none;
+  height: 30px;
+}
+.encoding-menu {
+  border: solid 2px rgba(37, 37, 37, 0.5);
+  padding: 0;
+  border-radius: 5px;
+}

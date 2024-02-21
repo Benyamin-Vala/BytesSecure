@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>BytesSecure By SeyyedBenyamin Valaei</title>
+  </head>
+  <body>
+    <div class="flex wrap menubar">
+      <h1 class="logo">BytesSecure By SeyyedBenyamin Valaei</h1>
+      <div>
+        <i class="bi bi-brightness-high-fill" id="lightThemeIcon" hidden></i>
+        <i class="bi bi-moon-stars-fill" id="darkThemeIcon"></i>
+      </div>
+    </div>
+    <div class="flex align-center menuIcons wrap gap-20">
+      <div class="menu-main-btn" id="passgen">
+        <i class="bi bi-key-fill"></i>
+      </div>
+      <div class="menu-main-btn" id="encoding">
+        <i class="bi bi-lock-fill"></i>
+      </div>
+      <div class="menu-main-btn" id="decoding">
+        <i class="bi bi-unlock-fill"></i>
+      </div>
+    </div>
+    <div
+      id="passgenMenu"
+      class="flex align-center justicify-center passgen-menu"
+    >
+      <div>
+        <h1 class="title">Password Generator</h1>
+        <div>
+          <div class="wrapper-passwordInput flex justicify-center align-center">
+            <div class="passwordInput-menu flex align-center">
+              <input disabled id="generateResultInput" />
+              <i class="bi bi-copy" id="copy-password"></i>
+            </div>
+          </div>
+          <h5>Password Length:</h5>
+          <input type="number" value="8" id="passwordLengthInput" class="password-length" />
+          <h5>Password Settings:</h5>
+          <div class="flex justicify-between">
+            <div class="flex-column">
+              <div>
+                <input type="checkbox" id="Lowercase-pass" />
+                <label for="Lowercase-pass">Lowercase (a-z)</label>
+              </div>
+              <div>
+                <input type="checkbox" id="Numbers-pass" />
+                <label for="Numbers-pass">Numbers (0-9)</label>
+              </div>
+              <div>
+                <input type="checkbox" id="ExcludeDuplicate-pass" />
+                <label for="ExcludeDuplicate-pass">Exclude Duplicate</label>
+              </div>
+            </div>
+            <div class="flex-column">
+              <div>
+                <input type="checkbox" id="Upercase-pass" />
+                <label for="Upercase-pass">Upercase (A-Z)</label>
+              </div>
+              <div>
+                <input type="checkbox" id="Symbols-pass" />
+                <label for="Symbols-pass">Symbols (!@#&$^?)</label>
+              </div>
+              <div>
+                <input type="checkbox" id="includeSpaces-pass" />
+                <label for="includeSpaces-pass">Include Spaces</label>
+              </div>
+            </div>
+          </div>
+          <button class="password-gen-btn" id="passwordGenerateBtn">GENERATE PASSWORD</button>
+        </div>
+      </div>
+    </div>
+    <div
+      id="encodingMenu"
+      class="flex align-center justicify-center passgen-menu"
+    >
+    <div>
+        <h1 class="title">Encoding</h1>
+        <div>
+          <div class="wrapper-passwordInput flex justicify-center align-center">
+            <div class="encoding-menu flex align-center">
+                <select id="encoding-list" Size="1">  
+                    <option> String Encoding </option>  
+                    <option> Cryptography (SOON)</option>  
+                </select>  
+          
+            </div>
+          </div>
+          <h5>Encode Type</h5>
+          <div class="encoding-menu flex align-center">
+            <select id="encoding-list-items" Size="1">  
+                <option> Base64 Encoding </option>  
+                <option> URL Encoding (Percent Encoding)</option>  
+                <option> HTML Encoding (HTML Entity Encoding)</option>  
+                <option> Hexadecimal Encoding (Hex Encoding)</option>  
+                <option> Binary Encoding (Byte Encoding)</option>  
+                
+            
+                <option> Quoted-Printable Encoding (for Email)</option>  
+                <option> ASCII Encoding</option>  
+
+            </select>  
+      
+        </div>
+          <h5>Enter String :</h5>
+          <input type="text" value="" id="entered-encoding-string" class="password-length" />
+          <h5>Result :</h5>
+          <div class="wrapper-passwordInput flex justicify-center align-center">
+            <div class="passwordInput-menu flex align-center">
+              <input disabled id="resutl-encoding"/>
+              <i class="bi bi-copy" id="encoded-copy"></i>
+            </div>
+          </div>
+          <button class="password-gen-btn" id="EncodBtn">ENCODE STRING</button>
+        </div>
+      </div>
+    </div>
+      <div
+      id="decodingMenu"
+      class="flex align-center justicify-center passgen-menu"
+    >
+    <div>
+        <h1 class="title">Decoding</h1>
+        <div>
+          <div class="wrapper-passwordInput flex justicify-center align-center">
+            <div class="encoding-menu flex align-center">
+                <select id="decoding-list" Size="1">  
+                    <option> String Decoding </option>  
+                    <option> Cryptography (SOON)</option>  
+                </select>  
+          
+            </div>
+          </div>
+          <h5>Decode Type</h5>
+          <div class="encoding-menu flex align-center">
+            <select id="decoding-list-items" Size="1">  
+                <option> Base64 Decoding </option>  
+                <option> URL Decoding (Percent Decoding)</option>  
+                <option> HTML Decoding (HTML Entity Decoding)</option>  
+                <option> Hexadecimal Decoding (Hex Decoding)</option>  
+                <option> Binary Decoding (Byte Decoding)</option>  
+                
+                <option> Quoted-Printable Decoding (for Email)</option>  
+                <option> ASCII Decoding</option>  
+ 
+            </select>  
+      
+        </div>
+          <h5>Enter String :</h5>
+          <input type="text" value="" class="password-length" id="entered-decode-string" />
+          <h5>Result :</h5>
+          <div class="wrapper-passwordInput flex justicify-center align-center">
+            <div class="passwordInput-menu flex align-center">
+              <input disabled id="result-decoding"/>
+              <i class="bi bi-copy" id="copy-decoded"></i>
+            </div>
+          </div>
+          <button class="password-gen-btn" id="decode-btn">DECODE STRING</button>
+        </div>
+      </div>
+  </body>
+  <script src="script.js"></script>
+</html>
